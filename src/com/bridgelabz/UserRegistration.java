@@ -45,6 +45,7 @@ public class UserRegistration {
             System.out.println("MailId is invalid");
         }
     }
+  
     public void passRuleSecond() {
         System.out.print(" Please enter the password");
         String name = scan.nextLine();
