@@ -61,11 +61,25 @@ public class UserRegistration {
         }
     }
 
+    public void passRuleOne() {
+        System.out.print(" Please enter the password");
+        String name = scan.nextLine();
+        Pattern pattern = Pattern.compile("^.{8,}$");
+        Matcher match = pattern.matcher(name);
+        // System.out.println(match.matches());
+        if (match.matches()) {
+            System.out.println("password is valid");
+        } else {
+            System.out.println("password is invalid");
+        }
+    }
+
     public static void main(String[] args) {
         UserRegistration userDetails = new UserRegistration();
-        userDetails.firstName();
-        userDetails.lastName();
-        userDetails.validMail();
-        userDetails.validMobileNo();
+//        userDetails.firstName();
+//        userDetails.lastName();
+//        userDetails.validMail();
+//        userDetails.validMobileNo();
+        userDetails.passRuleOne();
     }
 }
