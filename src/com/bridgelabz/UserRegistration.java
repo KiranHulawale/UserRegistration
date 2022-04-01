@@ -58,11 +58,11 @@ public class UserRegistration {
             System.out.println("MobileNo is invalid");
         }
     }
-
-    public void password() {
+    
+     public void passRuleOne() {
         System.out.print(" Please enter the password");
         String name = scan.nextLine();
-        Pattern pattern = Pattern.compile("^(?=.*[A-Z]).{8,}$");
+        Pattern pattern = Pattern.compile("^.{8,}$");
         Matcher match = pattern.matcher(name);
         // System.out.println(match.matches());
         if (match.matches()) {
@@ -72,13 +72,14 @@ public class UserRegistration {
         }
     }
 
+
     public static void main(String[] args) {
         UserRegistration userDetails = new UserRegistration();
-//        userDetails.firstName();
-//        userDetails.lastName();
-//        userDetails.validMail();
-//        userDetails.validMobileNo();
-        userDetails.password();
+        userDetails.firstName();
+        userDetails.lastName();
+        userDetails.validMail();
+        userDetails.validMobileNo();
+        userDetails.passRuleOne();
     }
 }
 
