@@ -51,7 +51,7 @@ public class UserRegistration {
     public void validMobileNo() {
         System.out.print(" Please enter the mobile number");
         String name = scan.nextLine();
-        Pattern pattern = Pattern.compile("^[0-9]{1,3}[\\\\s][0-9]{10}$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9@$!%*#?&]{1,}[a-zA-Z0-9@$!%*#?&]{7,}$");
         Matcher match = pattern.matcher(name);
         // System.out.println(match.matches());
         if (match.matches()) {
