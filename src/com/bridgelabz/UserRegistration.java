@@ -46,7 +46,19 @@ public class UserRegistration {
         } else {
             System.out.println("MailId is invalid");
         }
+    }
 
+    public void validMobileNo() {
+        System.out.print(" Please enter the mobile number");
+        String name = scan.nextLine();
+        Pattern pattern = Pattern.compile("^[0-9]{1,3}[\\\\s][0-9]{10}$");
+        Matcher match = pattern.matcher(name);
+        // System.out.println(match.matches());
+        if (match.matches()) {
+            System.out.println("MobileNo is valid");
+        } else {
+            System.out.println("MobileNo is invalid");
+        }
     }
 
     public static void main(String[] args) {
@@ -54,5 +66,6 @@ public class UserRegistration {
         userDetails.firstName();
         userDetails.lastName();
         userDetails.validMail();
+        userDetails.validMobileNo();
     }
 }
