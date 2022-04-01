@@ -33,9 +33,11 @@ public class UserRegistration {
         }
     }
 
+
     public static void main(String[] args) {
         UserRegistration userDetails = new UserRegistration();
-        userDetails.firstName();
+        userDetails.firstName(name);
         userDetails.lastName();
     }
 }
+
