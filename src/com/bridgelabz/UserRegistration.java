@@ -45,8 +45,21 @@ public class UserRegistration {
             System.out.println("MailId is invalid");
         }
     }
-  
-    public void passRuleSecond() {
+
+    public void validMobileNo() {
+        System.out.print(" Please enter the mobile number");
+        String name = scan.nextLine();
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9@$!%*#?&]{1,}[a-zA-Z0-9@$!%*#?&]{7,}$");
+        Matcher match = pattern.matcher(name);
+        // System.out.println(match.matches());
+        if (match.matches()) {
+            System.out.println("MobileNo is valid");
+        } else {
+            System.out.println("MobileNo is invalid");
+        }
+    }
+
+    public void password() {
         System.out.print(" Please enter the password");
         String name = scan.nextLine();
         Pattern pattern = Pattern.compile("^(?=.*[A-Z]).{8,}$");
@@ -65,7 +78,7 @@ public class UserRegistration {
 //        userDetails.lastName();
 //        userDetails.validMail();
 //        userDetails.validMobileNo();
-        userDetails.passRuleSecond();
+        userDetails.password();
     }
 }
 
