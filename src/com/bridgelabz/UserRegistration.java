@@ -18,8 +18,7 @@ public class UserRegistration {
         } else {
             System.out.println("FirstName is invalid");
         }
-
-    }
+ }
 
     public void lastName() {
         System.out.print(" Please enter the LastName: ");
@@ -32,10 +31,9 @@ public class UserRegistration {
         } else {
             System.out.println("LastName is invalid");
         }
-
     }
-
-    public void validMail() {
+    
+      public void validMail() {
         System.out.print(" Please enter the mail id");
         String name = scan.nextLine();
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9+_-]+)*@[a-zA-Z0-9]+([.][a-zA-Z0-9+_-]+)+$");
@@ -64,7 +62,7 @@ public class UserRegistration {
     public void password() {
         System.out.print(" Please enter the password");
         String name = scan.nextLine();
-        Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9]).{8,}$");
+        Pattern pattern = Pattern.compile("^(?=.*[A-Z]).{8,}$");
         Matcher match = pattern.matcher(name);
         // System.out.println(match.matches());
         if (match.matches()) {
@@ -83,3 +81,4 @@ public class UserRegistration {
         userDetails.password();
     }
 }
+
