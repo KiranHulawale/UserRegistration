@@ -18,8 +18,7 @@ public class UserRegistration {
         } else {
             System.out.println("FirstName is invalid");
         }
-
-    }
+ }
 
     public void lastName() {
         System.out.print(" Please enter the LastName: ");
@@ -32,8 +31,7 @@ public class UserRegistration {
         } else {
             System.out.println("LastName is invalid");
         }
- }
-
+    }
     
       public void validMail() {
         System.out.print(" Please enter the mail id");
@@ -55,3 +53,4 @@ public class UserRegistration {
         userDetails.validMail();
     }
 }
+
