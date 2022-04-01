@@ -35,9 +35,24 @@ public class UserRegistration {
 
     }
 
+    public void validMail() {
+        System.out.print(" Please enter the mail id");
+        String name = scan.nextLine();
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9+_-]+)*@[a-zA-Z0-9]+([.][a-zA-Z0-9+_-]+)+$");
+        Matcher match = pattern.matcher(name);
+        // System.out.println(match.matches());
+        if (match.matches()) {
+            System.out.println("MailId is valid");
+        } else {
+            System.out.println("MailId is invalid");
+        }
+
+    }
+
     public static void main(String[] args) {
         UserRegistration userDetails = new UserRegistration();
         userDetails.firstName();
         userDetails.lastName();
+        userDetails.validMail();
     }
 }
